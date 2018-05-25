@@ -102,7 +102,7 @@ class FrontEnd
      *
      * @return bool Whether or not the menu should be cached.
      */
-    private static function isCacheable($args)
+    protected static function isCacheable($args)
     {
         // A simple filter to allow a menu to be excluded.
         return (bool)apply_filters('menu_cache_enable', true, $args);
