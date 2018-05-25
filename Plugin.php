@@ -54,7 +54,7 @@ class FrontEnd
         if (static::isCacheable($args)) {
             set_transient(static::getKey($args), $menu,
                 // This filter controls how long to cache a menu for.  Default is 5 minutes.
-                apply_filters('menu_cache_expiration', 5, $args)
+                apply_filters('menu_cache_expiration', 300, $args)
             );
         }
 
